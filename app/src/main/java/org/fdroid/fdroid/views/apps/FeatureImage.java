@@ -251,11 +251,7 @@ public class FeatureImage extends AppCompatImageView {
     public void loadImageAndDisplay(App app) {
         setColour(ContextCompat.getColor(getContext(), R.color.fdroid_blue));
 
-        if (app.featureGraphic == null) {
-            loadImageAndExtractColour(app.loadWithGlide(getContext(), app.iconFile));
-        } else {
-            Utils.loadWithGlide(getContext(), app.repoId, app.featureGraphic, this);
-        }
+        setImageResource(R.drawable.mullvad_feature_graphic);
     }
 
     private void loadImageAndExtractColour(RequestBuilder<Drawable> request) {
